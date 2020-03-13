@@ -1,4 +1,4 @@
-package repository3;
+package repository3.challanges;
 
 public class ThreeAndFiveSum {
     public static void main(String[] args) {
