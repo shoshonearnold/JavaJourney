@@ -17,7 +17,7 @@ public static int sumDigits(int number) {
 
 
     public static void main(String[] args) {
-        System.out.println(sumDigits(1234));
+        System.out.println(sumDigits(33));
     }
 }
 
