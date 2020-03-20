@@ -5,22 +5,24 @@ import java.util.Scanner;
 public class UserInput {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please Enter Your Year Of Birth: ");
+        System.out.println("Please Enter Year Of Birth Here: ");
         boolean hasNextInt = scanner.hasNextInt();
         if(hasNextInt) {
             int yearOfBirth = scanner.nextInt();
+            System.out.println("Please Enter Your Name here: ");
             scanner.nextLine();
-            System.out.println("Please Enter Your Name: ");
-            String name = scanner.nextLine();
             int age = 2019 - yearOfBirth;
-            if(age >= 0 && age <= 100) {
-                System.out.println("Your Name Is: " + name + " And Your Age is " + age);
+            String name = scanner.nextLine();
+            if(age > 0 && age <= 100) {
+                System.out.println("Youe name is " + name + " and you're " + age + " years old");
             } else {
-                System.out.println("Unable to validate Age");
+                System.out.println("Invalid year Of Birth");
             }
         } else {
-            System.out.println("Unable to Parse Age");
+            System.out.println("Unable to Parse Year Of Birth");
         }
     }
 }
+
+
 
