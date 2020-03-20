@@ -21,6 +21,7 @@ public class UserInput {
         } else {
             System.out.println("Unable to Parse Year Of Birth");
         }
+        scanner.close();
     }
 }
 
