@@ -5,13 +5,13 @@ public class Main {
         Classes ford = new Classes();
         ford.setDoors(4);
         ford.setWheels(4);
-        ford.setColor("white");
-        ford.setEngine("Idk some engine ffs lol");
         ford.setModel("f-150");
-        System.out.println("your ford has " + ford.getDoors() + " doors");
-        System.out.println("your ford has " + ford.getWheels() + " wheels");
-        System.out.println("your ford is " + ford.getColor());
-        System.out.println("your ford has " + ford.getEngine());
-        System.out.println("your ford has a " + ford.getModel() + " under the hood");
+        ford.setColor("Blue");
+        ford.setEngine("567654");
+        System.out.println("Your ford has " + ford.getDoors() + " doors");
+        System.out.println("Your ford has " + ford.getWheels() + " wheels");
+        System.out.println("Your ford is a " + ford.getModel());
+        System.out.println("Your ford is " + ford.getColor() + " on the exterior");
+        System.out.println("Your ford has engine #" + ford.getEngine() + " installed");
     }
 }

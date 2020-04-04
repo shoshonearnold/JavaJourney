@@ -5,8 +5,8 @@ public class Classes {
     private int doors;
     private int wheels;
     private String model;
-    private String color;
     private String engine;
+    private String color;
 
     public void setDoors(int doors) {
         this.doors = doors;
@@ -32,19 +32,19 @@ public class Classes {
         return model;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
     public void setEngine(String engine) {
         this.engine = engine;
     }
 
     public String getEngine() {
         return engine;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
     }
 }
