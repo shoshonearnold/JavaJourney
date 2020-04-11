@@ -1,4 +1,4 @@
-package repository3.challanges;
+package repository3.Challenges;
 
 public class DigitSum {
 
