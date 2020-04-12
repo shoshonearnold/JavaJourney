@@ -4,22 +4,16 @@ public class BankAccount  {
 
     private int accountNumber;
     private double accountBalance;
-    private double depositedFunds;
-    private double withdrawnFunds;
     private String customerName;
     private String customerEmail;
-    private long customerPhoneNumber;
+    private String customerPhoneNumber;
 
-    public BankAccount(int accountNumber, double accountBalance, double depositedFunds, double withdrawnFunds,
-                       String customerName, String customerEmail, long customerPhoneNumber) {
+    public BankAccount(int accountNumber, double accountBalance, String customerName, String customerEmail, String customerPhoneNumber) {
         this.accountNumber = accountNumber;
         this.accountBalance = accountBalance;
-        this.depositedFunds = depositedFunds;
-        this.withdrawnFunds = withdrawnFunds;
         this.customerName = customerName;
         this.customerEmail = customerEmail;
         this.customerPhoneNumber = customerPhoneNumber;
-
     }
 
     public int getAccountNumber() {
@@ -38,30 +32,25 @@ public class BankAccount  {
         this.accountBalance = accountBalance;
     }
 
-    public double getDepositedFunds() {
-        if(accountBalance >= 0) {
-            accountBalance += depositedFunds;
+    public double depositFunds(double deposit) {
+        if(accountBalance + deposit >= 0) {
+            accountBalance += deposit;
+            System.out.println("Thank you for deposit, your new balance is " + String.format("%.2f",accountBalance));
+        } else {
             return accountBalance;
         }
-        System.out.println("We're sorry! You don't have enough funds to deposit " + depositedFunds);
-        return depositedFunds;
+        return -1;
     }
 
-    public void setDepositedFunds(double depositedFunds) {
-        this.depositedFunds = depositedFunds;
-    }
-
-    public double getWithdrawnFunds() {
-        if(accountBalance >= 0) {
-            accountBalance -= withdrawnFunds;
+    public double withdrawFunds(double withdraw) {
+        if(accountBalance - withdraw <= 0) {
+            System.out.println("Cannot process your withdrawl, your account is currently at " + accountBalance);
+        } else {
+            accountBalance -= withdraw;
+            System.out.println("Thank you for withdrawl, your new balance is " + String.format("%.2f", accountBalance));
             return accountBalance;
         }
-        System.out.println("We're sorry! You don't have enough funds to Withdraw " + withdrawnFunds);
-        return withdrawnFunds;
-    }
-
-    public void setWithdrawnFunds(double withdrawnFunds) {
-        this.withdrawnFunds = withdrawnFunds;
+        return -1;
     }
 
     public String getCustomerName() {
@@ -80,24 +69,19 @@ public class BankAccount  {
         this.customerEmail = customerEmail;
     }
 
-    public long getCustomerPhoneNumber() {
+    public String getCustomerPhoneNumber() {
         return customerPhoneNumber;
     }
 
-    public void setCustomerPhoneNumber(long customerPhoneNumber) {
+    public void setCustomerPhoneNumber(String customerPhoneNumber) {
         this.customerPhoneNumber = customerPhoneNumber;
     }
 
-
-
     public static void main(String[] args) {
-        BankAccount bankAccount = new BankAccount(675667875,7637.99,
-                30.98,22.05, "Shony Arnold","123@gmail.com",9842189006L);
-        System.out.println("Good Afternoon, " + bankAccount.getCustomerName());
-        System.out.println("Your Account Number Remains " + bankAccount.getAccountNumber());
-        System.out.println("your account balance is $" + bankAccount.getAccountBalance());
-        System.out.println("your deposit was successful! Your new balance is now $" + String.format("%.2f", bankAccount.getDepositedFunds()));
-        bankAccount.setAccountBalance(7637.99);
-        System.out.println("Your requested withdrawl was successful! Your new balance is now $" + bankAccount.getWithdrawnFunds());
+        BankAccount bankAccount = new BankAccount(9876789,567.88,"Shony",
+                "123@gmail.com","(984) 218-9006");
+        bankAccount.withdrawFunds(56.56);
+        bankAccount.depositFunds(100.00);
+        System.out.println("Good Afternoon, " + bankAccount.customerName + "! Your current balance is " + String.format("%.2f",bankAccount.accountBalance));
     }
 }
