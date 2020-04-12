@@ -10,6 +10,18 @@ public class BankAccount  {
     private String customerEmail;
     private long customerPhoneNumber;
 
+    public BankAccount(int accountNumber, double accountBalance, double depositedFunds, double withdrawnFunds,
+                       String customerName, String customerEmail, long customerPhoneNumber) {
+        this.accountNumber = accountNumber;
+        this.accountBalance = accountBalance;
+        this.depositedFunds = depositedFunds;
+        this.withdrawnFunds = withdrawnFunds;
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.customerPhoneNumber = customerPhoneNumber;
+
+    }
+
     public int getAccountNumber() {
         return accountNumber;
     }
@@ -79,14 +91,8 @@ public class BankAccount  {
 
 
     public static void main(String[] args) {
-        BankAccount bankAccount = new BankAccount();
-        bankAccount.setAccountNumber(675667875);
-        bankAccount.setAccountBalance(7637.99);
-        bankAccount.setDepositedFunds(30.98);
-        bankAccount.setWithdrawnFunds(22.05);
-        bankAccount.setCustomerName("John Smith");
-        bankAccount.setCustomerEmail("eastcoastshony@gmail.com");
-        bankAccount.setCustomerPhoneNumber(9842189006L);
+        BankAccount bankAccount = new BankAccount(675667875,7637.99,
+                30.98,22.05, "Shony Arnold","123@gmail.com",9842189006L);
         System.out.println("Good Afternoon, " + bankAccount.getCustomerName());
         System.out.println("Your Account Number Remains " + bankAccount.getAccountNumber());
         System.out.println("your account balance is $" + bankAccount.getAccountBalance());
