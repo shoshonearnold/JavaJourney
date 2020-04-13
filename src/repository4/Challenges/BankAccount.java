@@ -16,20 +16,16 @@ public class BankAccount  {
         this.customerPhoneNumber = customerPhoneNumber;
     }
 
+    public BankAccount(String customerName, String customerEmail, String customerPhoneNumber) {
+        this(789456,222.59,"jeff","123@gmail.com","(984) 218-9006");
+    }
+
     public int getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(int accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
     public double getAccountBalance() {
         return accountBalance;
-    }
-
-    public void setAccountBalance(double accountBalance) {
-        this.accountBalance = accountBalance;
     }
 
     public double depositFunds(double deposit) {
@@ -57,31 +53,17 @@ public class BankAccount  {
         return customerName;
     }
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-
     public String getCustomerEmail() {
         return customerEmail;
-    }
-
-    public void setCustomerEmail(String customerEmail) {
-        this.customerEmail = customerEmail;
     }
 
     public String getCustomerPhoneNumber() {
         return customerPhoneNumber;
     }
 
-    public void setCustomerPhoneNumber(String customerPhoneNumber) {
-        this.customerPhoneNumber = customerPhoneNumber;
-    }
-
     public static void main(String[] args) {
-        BankAccount bankAccount = new BankAccount(9876789,567.88,"Shony",
-                "123@gmail.com","(984) 218-9006");
-        bankAccount.withdrawFunds(56.56);
-        bankAccount.depositFunds(100.00);
+        BankAccount bankAccount = new BankAccount("jeff","123@gmail.com","(984) 218-9006");
         System.out.println("Good Afternoon, " + bankAccount.customerName + "! Your current balance is " + String.format("%.2f",bankAccount.accountBalance));
+        System.out.println(bankAccount.getAccountBalance());
     }
 }
