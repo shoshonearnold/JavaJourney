@@ -11,35 +11,31 @@ public class WallArea {
     }
 
     public WallArea() {
-        this(12.78,99.98);
+        this(0.0,0.0);
     }
 
     public double getHeight() {
-        if(height < 0) {
-            this.height = 0;
-        }
         return this.height;
     }
 
     public double getWidth() {
-        if(width < 0) {
-            this.width = 0;
-        }
-        return width;
+        return this.width;
     }
 
-    public void setWidth(double adjustedWidth) {
-        if(adjustedWidth < 0) {
-            this.width = 0;
+    public void setWidth(double width) {
+        if(width <= 0) {
+            this.width = 0.0;
+        }else {
+            this.width = width;
         }
-        this.width = width;
     }
 
-    public void setHeight(double adjustedHeight) {
-        if(adjustedHeight < 0) {
-            this.height = 0;
+    public void setHeight(double height) {
+        if(height <= 0) {
+            this.height = 0.0;
+        } else {
+            this.height = height;
         }
-        this.height = height;
     }
 
     public double getArea() {
