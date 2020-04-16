@@ -23,13 +23,12 @@ public class ComplexNumber {
         this.imaginary += imaginary;
     }
 
-    public void add(double ComplexNumber) {
-        this.imaginary += ComplexNumber;
-        add(this.real,this.imaginary);
+    public void add(ComplexNumber other) {
+        add(other.real,other.imaginary);
     }
 
     /*
-    /"subtract parameters from fields" means literally subtract the subtract parameters
+    "subtract parameters from fields" means literally subtract the subtract parameters
     from the INITIALIZED instance variables
      */
     public void subtract(double real,double imaginary) {
@@ -38,6 +37,12 @@ public class ComplexNumber {
     }
 
     public void subtract(ComplexNumber other) {
-        subtract(this.real,this.imaginary);
+        subtract(other.real,other.imaginary);
+    }
+
+    public static void main(String[] args) {
+        ComplexNumber complexNumber = new ComplexNumber(1.0,-2.0);
+        System.out.println(complexNumber.getReal() + complexNumber.getImaginary());
+        System.out.println(complexNumber.getReal() - complexNumber.getImaginary());
     }
 }
