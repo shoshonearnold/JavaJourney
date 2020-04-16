@@ -17,19 +17,11 @@ public class Floor {
         return this.length;
     }
 
-    public void setLength(double length) {
-        this.length = length;
-    }
-
     public double getWidth() {
         if(this.width < 0) {
             this.width = 0;
         }
         return this.width;
-    }
-
-    public void setWidth(double width) {
-        this.width = width;
     }
 
     public double getArea() {
