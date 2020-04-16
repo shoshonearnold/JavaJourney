@@ -28,7 +28,10 @@ public class ComplexNumber {
         add(this.real,this.imaginary);
     }
 
-    //"add parameters to fields" means literally add the add parameters to the INITIALIZED instance variables
+    /*
+    /"subtract parameters from fields" means literally subtract the subtract parameters
+    from the INITIALIZED instance variables
+     */
     public void subtract(double real,double imaginary) {
         this.real -= real; // parameters to fields: -=
         this.imaginary -= imaginary;
