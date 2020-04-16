@@ -17,19 +17,24 @@ public class ComplexNumber {
         return this.imaginary;
     }
 
-    public double add(double real, double imaginary) {
-        return (this.real) + (this.imaginary);
+    //"add parameters to fields" means literally add the add parameters to the INITIALIZED instance variables
+    public void add(double real,double imaginary) {
+        this.real += real; // parameters to fields: +=
+        this.imaginary += imaginary;
     }
 
-    public double add(double ComplexNumber) {
-        return this.imaginary + ComplexNumber;
+    public void add(double ComplexNumber) {
+        this.imaginary += ComplexNumber;
+        add(this.real,this.imaginary);
     }
 
-    public double subtract(double real, double imaginary) {
-        return (this.real) - (this.imaginary);
+    //"add parameters to fields" means literally add the add parameters to the INITIALIZED instance variables
+    public void subtract(double real,double imaginary) {
+        this.real -= real; // parameters to fields: -=
+        this.imaginary -= imaginary;
     }
 
-    public double subtract(ComplexNumber other) {
-
+    public void subtract(ComplexNumber other) {
+        subtract(this.real,this.imaginary);
     }
 }
