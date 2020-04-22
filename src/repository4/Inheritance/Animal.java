@@ -20,8 +20,8 @@ public class Animal {
         System.out.println("this method is being called");
     }
 
-    public void move() {
-
+    public void move(int speed) {
+        System.out.println("animal is moving @ " + speed);
     }
 
     public int getBrain() {
