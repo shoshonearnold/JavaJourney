@@ -13,3 +13,4 @@ class MainInst {
         rex.bark();
     }
 }
+
