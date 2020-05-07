@@ -1,7 +1,6 @@
 package repository4.Inheritance.ThisVsSuper;
 
 public class Shape {
-
     private int x;
     private int y;
 
@@ -12,12 +11,11 @@ public class Shape {
 }
 
 class Rectangle extends Shape {
-
     private int width;
     private int height;
 
-    public Rectangle(int x, int y) {
-        this(x, y, 0, 0);
+    public Rectangle(int x,int y) {
+        this(x,y,0,0);
     }
 
     public Rectangle(int x, int y, int width, int height) {
@@ -32,7 +30,7 @@ class bigRectangle extends Rectangle {
     private String name;
 
     public bigRectangle(int x, int y) {
-        this(x,y,0,0);
+        super(x, y,0,0);
     }
 
     public bigRectangle(int x, int y, int width, int height) {
@@ -45,3 +43,5 @@ class bigRectangle extends Rectangle {
         this.name = name;
     }
 }
+
+
