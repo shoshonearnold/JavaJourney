@@ -1,48 +1,46 @@
 package repository4.Inheritance;
 
 public class Vehicle {
-    private int engine;
-    private int size;
 
-    public Vehicle(int engine, int size) {
+    private int engine;
+    private int seats;
+
+    public Vehicle(int engine, int seats) {
         this.engine = engine;
-        this.size = size;
+        this.seats = seats;
     }
 }
 
 class Car extends Vehicle {
+    private int tires;
+    private String steering;
 
-    private int wheels;
-    private String Color;
-
-    public Car(int engine, int size) {
-        this(engine, size,1,"red");
+    public Car(int engine, int seats) {
+        this(engine, seats,4,"AWD");
     }
 
-    public Car(int engine, int size, int wheels, String color) {
-        super(engine, size);
-        this.wheels = wheels;
-        Color = color;
+    public Car(int engine, int seats, int tires, String steering) {
+        super(engine, seats);
+        this.tires = tires;
+        this.steering = steering;
     }
 }
 
 class Mustang extends Car {
-    private String steering;
     private int gears;
-    private int speed;
+    private int moving;
 
-    public Mustang(int engine, int size) {
-        super(engine, size);
+    public Mustang(int engine, int seats) {
+        super(engine, seats);
     }
 
-    public Mustang(int engine, int size, int wheels, String color) {
-        super(engine, size, wheels, color);
+    public Mustang(int engine, int seats, int tires, String steering) {
+        this(engine, seats, tires, steering,6,90);
     }
 
-    public Mustang(int engine, int size, int wheels, String color, String steering, int gears, int speed) {
-        super(engine, size, wheels, color);
-        this.steering = steering;
+    public Mustang(int engine, int seats, int tires, String steering, int gears, int moving) {
+        super(engine, seats, tires, steering);
         this.gears = gears;
-        this.speed = speed;
+        this.moving = moving;
     }
 }
