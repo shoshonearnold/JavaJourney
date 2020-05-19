@@ -4,12 +4,7 @@ public class Outlander extends Car {
     private int roadServiceMonths;
 
     public Outlander(int roadServiceMonths) {
-        super("Outlander", "4WD", 5
-                /*including spare*/, 6/*including truck,hood*/, 6, false);
-        this.roadServiceMonths = roadServiceMonths;
-    }
-
-    public void setRoadServiceMonths(int roadServiceMonths) {
+        super("Outlander", "4WD", 5/*+ spare*/, 6/*+ hood,trunk*/, 6, false);
         this.roadServiceMonths = roadServiceMonths;
     }
 }

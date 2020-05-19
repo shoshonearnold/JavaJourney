@@ -20,7 +20,33 @@ public class Car extends Vehicle {
         this.currentGear = currentGear;
     }
 
-    public void changeVelocity(int speed, int direction) {
-        move(speed, direction);
+    /*
+    public void move(int velocity, int direction) {
+        move(velocity, direction);
+    */
+
+    @Override
+    public void move(int velocity, int direction) {
+        super.move(velocity, direction);
+    }
+
+    public int getWheels() {
+        return wheels;
+    }
+
+    public int getDoors() {
+        return doors;
+    }
+
+    public int getGears() {
+        return gears;
+    }
+
+    public boolean isManual() {
+        return isManual;
+    }
+
+    public int getCurrentGear() {
+        return currentGear;
     }
 }
