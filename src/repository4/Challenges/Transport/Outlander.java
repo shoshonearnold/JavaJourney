@@ -5,7 +5,7 @@ public class Outlander extends Car {
 
     public Outlander(int roadServiceMonths) {
         super("Outlander", "4WD", 5
-                /*including spare*/, 6/*including truck,hood*/, 6, false);
+                /*including spare*/, 6/*including trunk,hood*/, 6, false);
         this.roadServiceMonths = roadServiceMonths;
     }
 
