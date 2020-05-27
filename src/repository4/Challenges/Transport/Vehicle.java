@@ -22,6 +22,10 @@ public class Vehicle {
         this.currentVelocity = velocity;
     }
 
+    public void stop() {
+        this.currentVelocity = 0;
+    }
+
     public String getName() {
         return name;
     }
