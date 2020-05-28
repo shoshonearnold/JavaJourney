@@ -1,16 +1,16 @@
 package repository4.Challenges.Transport;
 
 public class Car extends Vehicle {
-    private int gears;
     private int wheels;
+    private int gears;
     private int doors;
     private boolean isManual;
     private int currentGear;
 
-    public Car(String name, String size, int gears, int wheels, int doors, boolean isManual) {
+    public Car(String name, String size, int wheels, int gears, int doors, boolean isManual) {
         super(name, size);
-        this.gears = gears;
         this.wheels = wheels;
+        this.gears = gears;
         this.doors = doors;
         this.isManual = isManual;
         this.currentGear = 1;
@@ -20,21 +20,21 @@ public class Car extends Vehicle {
         this.currentGear = currentGear;
     }
 
-    /*public void speed(int velocity, int direction) {
-        speed(velocity, direction);
+    /*public void move(int velocity, int direction) {
+        move(velocity, direction);
     }*/
 
     @Override
-    public void speed(int velocity, int direction) {
-        super.speed(velocity, direction);
-    }
-
-    public int getGears() {
-        return gears;
+    public void move(int velocity, int direction) {
+        super.move(velocity, direction);
     }
 
     public int getWheels() {
         return wheels;
+    }
+
+    public int getGears() {
+        return gears;
     }
 
     public int getDoors() {

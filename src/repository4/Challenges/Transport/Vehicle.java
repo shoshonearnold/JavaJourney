@@ -1,29 +1,37 @@
 package repository4.Challenges.Transport;
 
 public class Vehicle {
+    private int currentDirection;
+    private int currentVelocity;
     private String name;
     private String size;
-    private int currentVelocity;
-    private int currentDirection;
 
     public Vehicle(String name, String size) {
+        this.currentDirection = 0;
+        this.currentVelocity = 0;
         this.name = name;
         this.size = size;
-        this.currentVelocity = 0;
-        this.currentDirection = 0;
     }
 
     public void steering(int direction) {
         this.currentDirection += direction;
     }
 
-    public void speed(int velocity, int direction) {
-        this.currentDirection = direction;
+    public void move(int velocity, int direction) {
         this.currentVelocity = velocity;
+        this.currentDirection = direction;
     }
 
     public void stop() {
-        this.currentVelocity = 0;
+        currentVelocity = 0;
+    }
+
+    public int getCurrentDirection() {
+        return currentDirection;
+    }
+
+    public int getCurrentVelocity() {
+        return currentVelocity;
     }
 
     public String getName() {
@@ -33,13 +41,4 @@ public class Vehicle {
     public String getSize() {
         return size;
     }
-
-    public int getCurrentVelocity() {
-        return currentVelocity;
-    }
-
-    public int getCurrentDirection() {
-        return currentDirection;
-    }
-
 }
