@@ -3,8 +3,8 @@ package repository4.Challenges.PoolArea;
 public class Cuboid extends Rectangle {
     private double height;
 
-    public Cuboid(double length, double width, double height) {
-        super(length, width);
+    public Cuboid(double width, double length, double height) {
+        super(width, length);
         if(height < 0) {
             height = 0;
         }
@@ -12,10 +12,10 @@ public class Cuboid extends Rectangle {
     }
 
     public double getHeight() {
-        return this.height;
+        return height;
     }
 
     public double getVolume() {
-        return getArea() * this.height;
+        return getArea() * height;
     }
 }
