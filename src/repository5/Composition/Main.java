@@ -1,4 +1,4 @@
-package repository5.Challenge.Composition;
+package repository5.Composition;
 
 public class Main {
     public static void main(String[] args) {
